@@ -1,3 +1,31 @@
+//objects...
+
+var end={
+  poop: "POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP Ok bye!",
+  imMad: "I'm mad at you. I tried to work with you, but I'm totes over it. Go away!",
+  thatsWhat: "That's what I'm talking about! Woohoo! I knew you had it in you! Ok, now refresh the page and retry the game!! You can do it!!",
+  okCool: "Ok, cool. I'll leave you alone then.",
+  youreNot: "You're not my friend. I don't want to talk to you anymore!!",
+  justin: "You are a beautiful genius!! You should treat yourself to some JT videos. Bye!",
+  goCry: "I'm mad at you now. Maybe you should go cry a little. Bye!",
+  paintNails: "Nice choice! I love glitter! Go paint your nails! Bye!",
+  timeOut: "Wrong! Go take a time out! Bye!",
+  learnCool:"Totally awesome work, but I feel like you should probably go and learn about Cool Stuff, so go google cool stuff and BYE!",
+  imProud: "I'm proud of you for admitting that. Give yourself a hig and take a nap. xoxo",
+  areYou: "Are you messing with me? Well, I'll mess back with you! You can start the game over! Bye!",
+  ohMy: "Oh my! You are really trying my nerves! I need a breather. Bye!",
+  iGaveYou:  "Really?? I gave you the answer!!!! I'm done with you! Go away!!!",
+  mostWonderful:"You are the most wonderful person in the whole world! I love you! Everyone loves you! You win the game! You win life! Thank you...now please go away",
+  eww:"Ewwwww! I don't like you! Go away!!",
+  toilet:"I get it. The toilet is a useful thing. But really, it's your favorite? I think you should go outside and think about your decision. I'll be here when you're ready. Bye.",
+  trashCheck:"That's cool! Please go check to make sure there's no trash in it! Toodles!",
+  recyclingCheck:"That's cool! Please go check and make sure there are no recyclables in it! Thanks, hun! Bye!",
+  napTime:"Now you're on the right track! Go take a nap and then let's dominate the game!"
+  }
+
+//here we go!!
+
+
 var confirmation = confirm(
   "Welcome to the Recycling Adventure Game!! Are you ready? I am! Let's do this!!"
 );
@@ -20,8 +48,9 @@ if (answer === "yes") {
         "Does food go in (a) the trash can or (b) the recycling bin? a or b");
       if (answer === "a") {
         alert(
-          "You are the most wonderfu person in the whole world! I love you! Everyone loves you! You win the game! You win life! Thank you...now please go away"
+          end.mostWonderful
         );
+        youreTheBest();
       } else {
         alert("Oh come on! You know the answer...it's a! Go back and chose a!!");
         var answer = prompt(
@@ -29,12 +58,14 @@ if (answer === "yes") {
         );
         if (answer === "a") {
           alert(
-            "You are the most wonderful person in the whole world! I love you! Everyone loves you! You win the game! You win life! Thank you...now please go away"
+            end.mostWonderful
           );
+          youreTheBest();
         } else {
           alert(
-            "Really?? I gave you the answer!!!! I'm done with you! Go away!!!"
-          )
+            end.iGaveYou
+          );
+          tryAgain();
         }
       }
     } else if (answer === "b") {
@@ -43,7 +74,8 @@ if (answer === "yes") {
         "Does a dirty napkin go in (a) the trash can or (b) the recycling bin? a or b"
       );
       if (answer === "a") {
-        alert("Yes! You are a genius! Go away and teach you're friends!");
+        alert(end.mostWonderful);
+        youreTheBest();
       } else {
         alert(
           "Umm...NO! Go eat the dirty napkin you put in the recycling bin!!!"
@@ -56,16 +88,19 @@ if (answer === "yes") {
       );
       if (answer === "a") {
         alert(
-          "That's cool! Please go check and make sure there are no recyclables in it! Thanks, hun! Bye!"
+          end.recyclingCheck
         );
+        tryAgain();
       } else if (answer === "b") {
         alert(
-          "That's cool! Please go check to make sure there's no trash in it! Toodles!"
+          end.trashCheck
         );
+        tryAgain();
       } else if (answer === "c") {
         alert(
-          "I get it. The toilet is a useful thing. But really, it's your favorite? I think you should go outside and think about your decision. I'll be here when you're ready. Bye."
+          end.toilet
         );
+        tryAgain();
       }
     }
   } else if (answer === "a") {
@@ -74,11 +109,13 @@ if (answer === "yes") {
     );
     var answer = prompt("Should you put babies in the recylcing bin? yes or no");
     if (answer === "yes") {
-      alert("Ewwwww! I don't like you! Go away!!");
+      alert(end.eww);
+      tryAgain();
     } else {
       alert(
-        "Glad to know you have some since. Why don't you refresh the browser and give it another go!"
-      )
+        end.napTime
+      );
+      tryAgain();
     }
   } else if (answer === "c") {
     alert(
@@ -101,8 +138,9 @@ if (answer === "yes") {
         );
         if (answer === "a") {
           alert(
-            "You are the most wonderfu person in the whole world! I love you! Everyone loves you! You win the game! You win life! Thank you...now please go away"
+            end.mostWonderful
           );
+          youreTheBest();
         } else {
           alert(
             "Oh come on! You know the answer...it's a! Go back and chose a!!"
@@ -112,17 +150,20 @@ if (answer === "yes") {
           );
           if (answer === "a") {
             alert(
-              "You are the most wonderful person in the whole world! I love you! Everyone loves you! You win the game! You win life! Thank you...now please go away"
+              end.mostWonderful
             );
+            youreTheBest();
           } else {
             alert(
-              "Really?? I gave you the answer!!!! I'm done with you! Go away!!!"
+              end.iGaveYou
             );
+            tryAgain();
           }
         }
       }
     } else {
-      alert("Oh my! You are really trying my nerves! I need a breather. Bye!")
+      alert(end.ohMy);
+      tryAgain();
     }
   }
 } else if (answer === "maybe") {
@@ -140,13 +181,16 @@ if (answer === "yes") {
       );
       if (answer === "a") {
         alert(
-          "Now you're on the right track! Go take a nap and come back later ready to dominate the game!"
+          end.napTime
         );
+        tryAgain();
       } else {
-        "Are you messing with me? Well, I'll mess back with you! You can start the game over! Bye!"
+        alert(end.areYou);
+        tryAgain();
       }
     } else {
-      "Are you messing with me? Well, I'll mess back with you! You can start the game over! Bye!"
+      alert(end.areYou);
+      tryAgain();
     }
   } else if (answer === "no") {
     var answer = prompt(
@@ -155,8 +199,9 @@ if (answer === "yes") {
       alert("I'm through with you...AND I HEARD YOU EAT DRYER LINT!");
     } else {
       alert(
-        "I'm proud of you for admitting that. Give yourself a hig and take a nap. xoxo"
+        end.imProud
       );
+      tryAgain();
     }
   } else if (answer === "idk") {
     var answer = prompt(
@@ -173,19 +218,23 @@ if (answer === "yes") {
         );
         if (answer === "b") {
           alert(
-            "Totally awesome work, but I feel like you should probably go and learn about Cool Stuff, so go google cool stuff and BYE!"
+            end.learnCool
           );
+          tryAgain();
         } else {
-          alert("Wrong! Go take a time out! Bye!");
+          alert(end.timeOut);
+          tryAgain();
         }
       } else if (answer === "b") {
         var answer = prompt(
           "I'm sorry. Let's talk about something fun! Nail Polish! What do you think...(a) glitter or (b) no glitter??"
         );
         if (answer === "a") {
-          alert("Nice choice! I love glitter! Go paint your nails! Bye!");
+          alert(end.paintNails);
+          tryAgain();
         } else {
-          alert("I'm mad at you now. Maybe you should go cry a little. Bye!");
+          alert(end.goCry);
+          tryAgain();
         }
       }
     } else if (answer === "b") {
@@ -193,9 +242,11 @@ if (answer === "yes") {
         "I'm sorry. Let's talk about something fun! Nail Polish! What do you think...(a) glitter or (b) no glitter??"
       );
       if (answer === "a") {
-        alert("Nice choice! I love glitter! Go paint your nails! Bye!");
+        alert(end.paintNails);
+        nailPainting();
       } else {
-        alert("I'm mad at you now. Maybe you should go cry a little. Bye!");
+        alert(end.goCry);
+        tryAgain();
       }
     } else if (answer === "c") {
       var answer = prompt(
@@ -203,10 +254,12 @@ if (answer === "yes") {
       );
       if (answer === "a") {
         alert(
-          "You are a beautiful genius!! You should treat yourself to some JT videos. Bye!"
+          end.justin
         );
+        justinTimberlake();
       } else {
-        alert("You're not my friend. I don't want to talk to you anymore!!");
+        alert(end.youreNot);
+        tryAgain();
       }
     }
   }
@@ -214,25 +267,29 @@ if (answer === "yes") {
   alert("Everyone knows that your feet stink");
   var answer = prompt("Do you enojoy being a jerk? yes or no or poop");
   if (answer === "yes") {
-    alert("Ok, cool. I'll leave you alone then.");
+    alert(end.okCool);
+    tryAgain();
   } else if (answer === "no") {
     var answer = prompt(
       "Then let's work on your recycling knowledge. It will help you be less of a jerk...btw. :) You ready? yes or no"
     );
     if (answer === "no") {
-      alert("Fine then! Bye!");
+      alert(end.youreNot);
+      tryAgain();
     } else {
       var answer = prompt(
         "Yay!! Here we go! Should dirty paper towels go in (a) the trash can or (b) the recycling bin? a or b"
       )
       if (answer === "a") {
         alert(
-          "That's what I'm talking about! Woohoo! I knew you had it in you! Ok, now refresh the page and retry the game!! You can do it!!"
-        )
+          end.thatsWhat
+        );
+        tryAgain();
       } else {
         alert(
-          "I'm mad at you. I tried to work with you, but I'm totes over it. Go away!"
-        )
+          end.imMad
+        );
+        tryAgain();
       }
     }
   } else if (answer === "yes") {
@@ -244,27 +301,59 @@ if (answer === "yes") {
       )
       if (answer === "a") {
         alert(
-          "That's what I'm talking about! Woohoo! I knew you had it in you! Ok, now refresh the page and retry the game!! You can do it!!"
-        )
+          end.thatsWhat
+        );
+        tryAgain();
       } else {
         alert(
-          "I'm mad at you. I tried to work with you, but I'm totes over it. Go away!"
-        )
+          end.imMad
+        );
+        tryAgain();
       }
     } else if (answer === "no") {
       var answer = prompt("Ugh! Really? Are you sure? yes or no");
       if (answer === "yes");
       alert(
-        "I'm mad at you. I tried to work with you, but I'm totes over it. Go away!"
+        end.imMad
       );
+      tryAgain();
     } else if (answer === "poop"){
       alert(
-        "POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP Ok bye!"
+        end.poop
       );
+      tryAgain();
     }
   } else if (answer === "poop") {
     alert(
-      "POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP POOP Ok bye!"
+      end.poop
     );
+    tryAgain();
   }
 }
+
+
+//functions! .....
+
+  function tryAgain(playersName){
+    var playersName=prompt ("I'm just kidding!! Sometimes I get a little emotional! Anyway, what's your name?");
+    alert("I'm sorry" + " " + playersName + "," + " " + " it seems like you need more recycling practice. Want to start again?? Pretty please!!!");
+    window.location.reload();
+  }
+
+  function youreTheBest(winnersName){
+    var winnersName=prompt ("You are so wonderful! What's your name?");
+    alert(winnersName + " " + "I have nothing left to teach you. Please enjoy this amazing Beyonce' vidoe!");
+    window.location="https://www.youtube.com/watch?v=sOzeRGI7RqY";
+  }
+
+  function justinTimberlake(yourName){
+    var yourName= prompt ("I love Justin Timberlake! I bet you do too! Hey, what's your name anyway?");
+    alert(yourName +"," + " " + "let's watch a video together!");
+    window.location="https://www.youtube.com/watch?v=81Jp48vzjGs&list=RD81Jp48vzjGs#t=9";
+  }
+
+  function nailPainting(nameName){
+    var nameName= prompt ("You like glittery nail polish?! Me too! Soooo...what's your name?");
+    alert(nameName + "," + " " + "let's look at nail polish tutorials!!");
+    window.location="https://www.youtube.com/watch?v=JTbd_9v8IR4";
+  }
